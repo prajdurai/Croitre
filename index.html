@@ -21,6 +21,16 @@ tailwind.config = {
 
 <style>
 html { scroll-behavior: smooth; }
+
+  @keyframes scroll {
+  0% { transform: translateX(100%); }
+  100% { transform: translateX(-100%); }
+}
+
+.animate-scroll {
+  display: inline-block;
+  animation: scroll 18s linear infinite;
+}
 </style>
 </head>
 
@@ -31,8 +41,8 @@ html { scroll-behavior: smooth; }
   <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
 
     <div class="flex items-center space-x-3">
-      <img src="/images/logo.png" alt="Croitre Infotech Logo"
-           class="w-36 h-auto object-contain">
+      <img src="images/logo.png" alt="Croitre Infotech Logo"
+           class="w-40 md:w-44 h-auto object-contain">
     </div>
 
     <div class="hidden md:flex space-x-8 font-medium">
@@ -131,19 +141,17 @@ html { scroll-behavior: smooth; }
   </div>
 </section>
 
-<!-- FOOTER -->
-<footer class="bg-primary text-gray-300 py-10">
-  <div class="max-w-7xl mx-auto px-6 text-center md:text-left grid md:grid-cols-2 gap-8">
-    <div>
-      <p>Croitre Infotech – Unleashing Potential, Elevating Success.</p>
-      <p class="mt-4">Contact: info@croitre.io | +91 98750 30159</p>
-    </div>
-    <div class="text-center md:text-right text-sm text-gray-400">
-      © 2026 Croitre Infotech. All rights reserved.
-    </div>
+<!-- Bottom Moving Tagline -->
+<div class="bg-primary overflow-hidden py-6">
+  <div class="whitespace-nowrap animate-scroll text-white text-xl md:text-2xl font-bold text-center">
+    Croitre Infotech – Unleashing Potential, Elevating Success.
+    &nbsp;&nbsp;&nbsp;&nbsp;
+    Croitre Infotech – Unleashing Potential, Elevating Success.
   </div>
+</div>
 </footer>
 
 </body>
 </html>
+
 
